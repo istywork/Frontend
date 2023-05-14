@@ -4,6 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".LoginActivity">
+
+    <!--
+    메인 색상코드 : #5544CC
+    카카오 색상코드 : #F7E600
+    네이버 색상코드 : #1EC800
+    -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="110dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="부자 되는 지름길"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="동산이몽"
+        android:textStyle="bold"
+        android:textSize="36sp"
+        android:textColor="#5544CC" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:backgroundTint="#F7E600"
+        android:text="카카오톡으로 시작"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="#3A1D1D"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:backgroundTint="#1EC800"
+        android:text="네이버로 시작"
+        android:textStyle="bold"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="로그인하지 않고 둘러보기"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="#909090" />
 
 </LinearLayout>
