@@ -19,6 +19,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun init() {
+        // 초기 화면 MapFragment()로
+        supportFragmentManager.beginTransaction().replace(binding.frameLayout.id, MapFragment()).commitAllowingStateLoss()
+
         bnv.setOnItemSelectedListener { item ->
             changeFragment(
                 when (item.itemId) {
