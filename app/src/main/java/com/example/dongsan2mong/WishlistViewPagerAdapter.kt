@@ -12,10 +12,10 @@ class WishlistViewPagerAdapter(fragmentActivity: FragmentActivity)
 
     override fun createFragment(position: Int): Fragment {
         when (position) {
-            // 0 -> return Fragment1()
-            // 1 -> return Fragment2()
-            // 2 -> return Fragment3()
-            // else -> return Fragment1()
+            0 -> return LatesthomeFragment()
+            1 -> return DibshomeFragment()
+            2 -> return CallfreesetFragment()
+            else -> return LatesthomeFragment()
         }
     }
 }
