@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DongSan2Mong</string>
+    <string name="menu_title_map">map</string>
+    <string name="menu_title_wishlist">wishlist</string>
+    <string name="menu_title_comparison">comparison</string>
+    <string name="menu_title_planner">planner</string>
 </resources>

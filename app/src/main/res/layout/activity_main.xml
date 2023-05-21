@@ -3,32 +3,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".MainActivity">
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-    <LinearLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="#5544CC"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="17dp"
+                android:src="@drawable/icon_search_white" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="17dp"
+                android:src="@drawable/icon_menu_white" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:background="#5544CC"
-        android:orientation="horizontal">
+        android:background="@color/main_blue"
+        app:itemIconTint="@color/white"
+        app:itemBackground="@drawable/background_menu_selector"
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconSize="30dp"
+        app:menu="@menu/bottom_navigation_menu" />
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:padding="17dp"
-            android:src="@drawable/icon_search_white" />
-
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:padding="17dp"
-            android:src="@drawable/icon_menu_white" />
-    </LinearLayout>
-    
 </LinearLayout>
