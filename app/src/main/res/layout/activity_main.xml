@@ -30,5 +30,5 @@
             android:padding="17dp"
             android:src="@drawable/icon_menu_white" />
     </LinearLayout>
-
+    
 </LinearLayout>
