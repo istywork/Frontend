@@ -119,14 +119,16 @@
     </LinearLayout>
 
     <FrameLayout
+        android:id="@+id/mapFrameLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/mapcapture" />
+        <fragment
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.naver.maps.map.MapFragment" />
 
         <LinearLayout
             android:id="@+id/mapOptionLayout"

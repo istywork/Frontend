@@ -6,13 +6,30 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.annotation.UiThread
 import androidx.fragment.app.Fragment
 import com.example.dongsan2mong.databinding.FragmentMapBinding
+import com.naver.maps.geometry.LatLng
+import com.naver.maps.map.CameraUpdate
+import com.naver.maps.map.NaverMap
+import com.naver.maps.map.OnMapReadyCallback
 
-class MapFragment : Fragment() {
+class MapFragment : Fragment(), OnMapReadyCallback {
     lateinit var binding: FragmentMapBinding
     lateinit var drawerOpenImageView: ImageView
     lateinit var drawerCloseImageView: ImageView
+    lateinit var nMap: NaverMap
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val fm = childFragmentManager
+        val mapFragment = fm.findFragmentById(R.id.mapView) as com.naver.maps.map.MapFragment?
+            ?: com.naver.maps.map.MapFragment.newInstance().also {
+                fm.beginTransaction().add(R.id.mapView, it).commit()
+            }
+        mapFragment.getMapAsync(this@MapFragment)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -60,6 +77,22 @@ class MapFragment : Fragment() {
                 startActivity(i)
             }
         }
+    }
 
+    @UiThread
+    // 다음은 OnMapReadyCallback을 등록해 NaverMap 객체를 얻어오는 예제입니다.
+    /*
+    MapFragment 및 MapView는 지도에 대한 뷰 역할만을 담당하므로 API를 호출하려면 인터페이스 역할을 하는 NaverMap 객체가 필요합니다.
+    MapFragment 또는 MapView의 getMapAsync() 메서드로 OnMapReadyCallback을 등록하면 비동기로 NaverMap 객체를 얻을 수 있습니다.
+    NaverMap 객체가 준비되면 onMapReady() 콜백 메서드가 호출됩니다.
+     */
+    override fun onMapReady(naverMap: NaverMap) {
+        // ...
+        println("onMapReady!!!")
+        nMap = naverMap
+        var cameraUpdate = CameraUpdate.scrollTo(LatLng(37.541618, 127.079374))
+        nMap.moveCamera(cameraUpdate)
+        cameraUpdate = CameraUpdate.zoomTo(16.0)
+        nMap.moveCamera(cameraUpdate)
     }
 }
