@@ -10,16 +10,16 @@
         android:background="#5544CC"
         android:orientation="horizontal">
 
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:padding="17dp"
             android:src="@drawable/icon_menu_white" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -31,92 +31,87 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:orientation="horizontal"
         android:gravity="center_vertical"
+        android:orientation="horizontal"
         android:paddingHorizontal="10dp">
 
         <LinearLayout
             android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:layout_height="match_parent" >
+            android:gravity="center_vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/map_option_area"
                 android:layout_marginHorizontal="7dp"
-                android:textSize="16sp"
-                android:textStyle="bold"
-
-                android:paddingHorizontal="6dp"
-                android:paddingVertical="3dp"
-
                 android:background="@drawable/background_map_option_selected"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="3dp"
+
+                android:text="@string/map_option_area"
                 android:textColor="@color/main_blue"
-                />
+
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="7dp"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="3dp"
                 android:text="@string/map_option_building_type"
-                android:layout_marginHorizontal="7dp"
-                android:textSize="16sp"
-                android:textStyle="bold"
-
-                android:paddingHorizontal="6dp"
-                android:paddingVertical="3dp"
 
                 android:textColor="@color/gray_unselected_option"
-                />
+                android:textSize="16sp"
+
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="7dp"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="3dp"
                 android:text="@string/map_option_property_type"
-                android:layout_marginHorizontal="7dp"
-                android:textSize="16sp"
-                android:textStyle="bold"
-
-                android:paddingHorizontal="6dp"
-                android:paddingVertical="3dp"
 
                 android:textColor="@color/gray_unselected_option"
-                />
+                android:textSize="16sp"
+
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="7dp"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="3dp"
                 android:text="@string/map_option_example1"
-                android:layout_marginHorizontal="7dp"
-                android:textSize="16sp"
-                android:textStyle="bold"
-
-                android:paddingHorizontal="6dp"
-                android:paddingVertical="3dp"
 
                 android:textColor="@color/gray_unselected_option"
-                />
+                android:textSize="16sp"
+
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/map_option_example2"
                 android:layout_marginHorizontal="7dp"
-                android:textSize="16sp"
-                android:textStyle="bold"
-
                 android:paddingHorizontal="6dp"
                 android:paddingVertical="3dp"
+                android:text="@string/map_option_example2"
 
                 android:textColor="@color/gray_unselected_option"
-                />
+                android:textSize="16sp"
+
+                android:textStyle="bold" />
         </LinearLayout>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/icon_map_arrow_down"
-            />
+            android:src="@drawable/icon_map_arrow_down" />
 
     </LinearLayout>
 
@@ -128,20 +123,20 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/mapcapture"/>
+            android:src="@drawable/mapcapture" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:background="@drawable/background_map_option_expand"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:textAlignment="center"
                 android:text="option will be here..."
-                />
+                android:textAlignment="center" />
 
         </LinearLayout>
 
