@@ -26,7 +26,7 @@ class WishlistFragment : Fragment() {
 
     private fun init() {
         // Toast.makeText(context, "hello", Toast.LENGTH_SHORT).show()
-        binding.wishlistViewPager.adapter = WishlistViewPagerAdapter(this)
+        binding.wishlistViewPager.adapter = WishlistViewPagerAdapter(this.requireActivity())
         TabLayoutMediator(binding.tabLayoutWishlist, binding.wishlistViewPager) { tab, pos ->
             tab.text = tabtextarr[pos]
         }.attach()
