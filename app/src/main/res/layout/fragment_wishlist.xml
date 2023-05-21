@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <TextView
@@ -13,7 +14,7 @@
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="18sp"
-        android:textStyle="bold"/>
+        android:fontFamily="@font/elicedigitalbaeum"/>
 
 
     <com.google.android.material.appbar.AppBarLayout
@@ -24,7 +25,16 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayoutWishlist"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:tabIndicatorHeight="3dp"
+            app:tabIndicatorColor="@color/black"
+            app:tabTextColor="@color/gray_unselected_option"
+            app:tabSelectedTextColor="@color/black"
+            app:tabRippleColor="@null"
+            app:tabGravity="fill"
+            app:tabMode="auto"
+            app:tabTextAppearance="@style/TabText"
+            >
 
         </com.google.android.material.tabs.TabLayout>
 
