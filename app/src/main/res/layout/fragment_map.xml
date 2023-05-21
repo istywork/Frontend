@@ -26,9 +26,6 @@
             android:layout_height="match_parent"
             android:padding="17dp"
             android:src="@drawable/icon_search_white" />
-
-
-
     </LinearLayout>
 
     <LinearLayout
