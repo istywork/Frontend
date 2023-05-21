@@ -1,7 +1,9 @@
 package com.example.dongsan2mong
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout.LOCK_MODE_LOCKED_CLOSED
 import androidx.fragment.app.Fragment
 import com.example.dongsan2mong.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -20,7 +22,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun init() {
         // 초기 화면 MapFragment()로
-        supportFragmentManager.beginTransaction().replace(binding.frameLayout.id, MapFragment()).commitAllowingStateLoss()
+        supportFragmentManager.beginTransaction().replace(binding.frameLayout.id, MapFragment())
+            .commitAllowingStateLoss()
 
         bnv.setOnItemSelectedListener { item ->
             changeFragment(
@@ -41,6 +44,7 @@ class MainActivity : AppCompatActivity() {
             )
             true
         }
+        binding.drawerLayout.setDrawerLockMode(LOCK_MODE_LOCKED_CLOSED)
     }
 
     private fun changeFragment(fragment: Fragment) {
@@ -49,4 +53,13 @@ class MainActivity : AppCompatActivity() {
             .replace(binding.frameLayout.id, fragment)
             .commit()
     }
+
+    fun openDrawer() {
+        binding.drawerLayout.openDrawer(GravityCompat.END)
+    }
+
+    fun closeDrawer() {
+        binding.drawerLayout.closeDrawer(GravityCompat.END)
+    }
+
 }
