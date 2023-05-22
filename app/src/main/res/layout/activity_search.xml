@@ -12,6 +12,7 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:id="@+id/searchBackBtn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:padding="10dp"
@@ -22,10 +23,11 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:text="동, 지하철역, 대학교를 검색하세요."
+            android:hint="동, 지하철역, 대학교를 검색하세요."
             android:textSize="14sp" />
 
         <ImageView
+            android:id="@+id/propertySearchBtn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:padding="10dp"
